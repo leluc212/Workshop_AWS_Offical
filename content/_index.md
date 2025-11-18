@@ -1,6 +1,6 @@
 ---
 title: "Internship Report"
-date: "`r Sys.Date()`"
+date: "08-09-2025"
 weight: 1
 chapter: false
 ---
@@ -13,17 +13,17 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+&emsp; **Full Name:** Le Tan Luc
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Phone Number:** 0379784509 
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** lucltse184288@fpt.edu.vn
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** Ho Chi Minh City FPT University 
 
-&emsp; **Major:** Information Technology
+&emsp; **Major:** Information Assurance
 
-&emsp; **Class:** AWS082025
+&emsp; **Class:** 
 
 &emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
 

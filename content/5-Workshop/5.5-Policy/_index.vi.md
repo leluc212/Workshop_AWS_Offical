@@ -1,6 +1,6 @@
 ---
 title : "VPC Endpoint Policies"
-date : "`r Sys.Date()`"
+date : "08-09-2025"
 weight : 5
 chapter : false
 pre : " <b> 5.5 </b> "

@@ -1,6 +1,6 @@
 ---
 title: "Chia sẻ, đóng góp ý kiến"
-date: "`r Sys.Date()`"
+date: "08-09-2025"
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "

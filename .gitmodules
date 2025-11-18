@@ -1,6 +1,2 @@
-[submodule "themes/hugo-theme-learn"]
 	path = themes/hugo-theme-learn
 	url = https://github.com/matcornic/hugo-theme-learn.git
-[submodule "workshop-template"]
-	path = workshop-template
-	url = https://github.com/leluc212/workshop-template.git
