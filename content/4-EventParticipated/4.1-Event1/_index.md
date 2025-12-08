@@ -1,126 +1,52 @@
 ---
 title: "Event 1"
-date: "08-09-2025"
+date: 2025-09-06
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Summary Report: “Kick-off AWS FCJ Workforce - FPTU OJT FALL 2025” Event
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+### About the AWS First Cloud Journey Workforce Program
 
-### Event Objectives
+- Launched in 2021, the program has accompanied more than 2,000 students across the country.
+  
+- Over 150 learners have received intensive training and are now working at leading technology companies in Vietnam and internationally.
+  
+### Main Objectives:
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Build a high-quality generation of AWS Builders for Vietnam.
+  
+- Equip students with practical skills in Cloud, DevOps, AI/ML, Security, Data & Analytics.
+  
+- Connect students with the AWS Study Group community of 47,000+ members and AWS partner enterprises.
+  
+- The program is not only about technology training but also serves as a vital bridge between knowledge – technology – career, helping students confidently integrate into the modern tech world and global community.
+  
+&emsp;**Even Name:** Event Name: Kick-off AWS FCJ Workforce – FPTU OJT FALL 2025
+&emsp;**Time:** 08:30, September 6, 2025
+&emsp;**Venue**: 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+&emsp;**Role in Event:**: Participant
 
-### Speakers
+### Speakers and Guests
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- School Representative: Mr. Nguyễn Trần Phước Bảo – Head of Corporate Relations Department (QHDN), Opening Speech
+- Accompanied by 2–3 members from the Corporate Relations Department
+#### Keynote & Industry Sharing
+- AWS First Cloud Journey & Future Orientation
+👤 Nguyễn Gia Hưng – Head of Solutions Architect, AWS Vietnam
+- DevOps & Future Career
+👤 Đỗ Huy Thắng – DevOps Lead, VNG
+#### Alumni & Career Sharing
+- From First Cloud Journey to GenAI Engineer
+👤 Danh Hoàng Hiếu Nghị – GenAI Engineer, Renova
+- She in Tech & Journey with First Cloud Journey
+👤 Bùi Hồ Linh Nhi – AI Engineer, SoftwareOne
+- A Day as a Cloud Engineer
+👤 Phạm Nguyễn Hải Anh – Cloud Engineer, G-Asia Pacific
+- Journey to First Cloud Journey
+👤 Nguyễn Đồng Thanh Hiệp – Principal Cloud Engineer, G-Asia Pacific
 
-### Key Highlights
-
-#### Identifying the drawbacks of legacy application architecture
-
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
-
-#### Transitioning to modern application architecture – Microservices
-
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
-
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
-
-#### Domain-Driven Design (DDD)
-
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
-
-#### Event-Driven Architecture
-
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
-
-### Key Takeaways
-
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+### ✨ Overal
+Today’s Kick-off event marks the beginning of the AWS Builders journey – where students not only gain access to the most advanced cloud technologies but also receive inspiration, connect with experts, and expand career opportunities.

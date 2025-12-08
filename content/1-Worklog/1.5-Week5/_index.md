@@ -1,57 +1,37 @@
 ---
 title: "Week 5 Worklog"
-date: "06-10-2025"
+date: 2025-09-16
 weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn about security services on AWS.
+* Do the lab.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| 2   | - Learn about security services on AWS. <br> <br>&emsp; + Shared Responsibility Model - AWS Identity and Access Management <br>&emsp; + Amazon Cognito <br>&emsp; + AWS Organization &
+AWS Identity Center ( SSO ) <br>&emsp; + AWS KMS <br>                                                                                            | 09/29/2025   | 09/30/2025      | <https://www.youtube.com/watch?v=tsobAlSg19g&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=150> |
+| 3   |  - Learn about security services on AWS. <br> <br>&emsp; + Shared Responsibility Model - AWS Identity and Access Management <br>&emsp; + Amazon Cognito <br>&emsp; + AWS Organization &
+AWS Identity Center ( SSO ) <br>&emsp; + AWS KMS <br>                                                                                            | 09/29/2025   | 09/30/2025      | <https://www.youtube.com/watch?v=tsobAlSg19g&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=150> |
+| 4   |  **Practice:** <br>&emsp; + Compete Lab 18 about AWS Security Hub | 10/01/2025   | 10/01/2025      | <https://000018.awsstudygroup.com> |
+| 5   | **Practice:** <br>&emsp; + Compete lab 22 & 27 about Optimizing EC2 Costs with Lambda và Manage Resources Using Tags and Resource Groups                | 10/02/2025   | 10/03/2025      | <https://000027.awsstudygroup.com> <https://000022.awsstudygroup.com> |
+| 6   |**Practice:** <br>&emsp; + Compete lab 22 & 27 about Optimizing EC2 Costs with Lambda và Manage Resources Using Tags and Resource Groups                | 10/02/2025   | 10/03/2025      | <https://000027.awsstudygroup.com> <https://000022.awsstudygroup.com> |
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understand AWS security services: 
+  * Shared Responsibility Model: The AWS security model defines the division of responsibilities between AWS and customers in protecting systems and data on the cloud platform.
+  * AWS Identity and Access Management (IAM): Manages user identities, roles, and permissions to securely control access to AWS resources.
+  * Amazon Cognito: Provides authentication, authorization, and user management for web and mobile applications. 
+  * AWS Organization & AWS Identity Center (SSO): Enables centralized management of multiple AWS accounts, unified access control, and single sign-on for users across the organization.
+  * AWS KMS: Manages encryption keys used to protect data, allowing secure creation, storage, and control of keys.
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Understand the structure of AWS Security Hub.
+* Successfully completed Lab 22 & 27.

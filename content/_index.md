@@ -1,17 +1,12 @@
 ---
 title: "Internship Report"
-date: "08-09-2025"
+date: "2025-09-08"
 weight: 1
 chapter: false
 ---
 
     
 # Internship Report
-
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 ### Student Information:
 &emsp; **Full Name:** Le Tan Luc
 
@@ -23,15 +18,15 @@ chapter: false
 
 &emsp; **Major:** Information Assurance
 
-&emsp; **Class:** 
+&emsp; **Class:** AWS082025
 
 &emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** From 08/09/2025 to 08/12/2025
 
-![Your profile picture](/images/avatar.png)
+![Your profile picture](/images/avatarme.png)
 
 ### Report Content
 

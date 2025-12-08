@@ -1,126 +1,117 @@
 ---
 title: "Blog 1"
-date: "08-09-2025"
+date: "2025-09-08"
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+**Migration & Modernization**  
+# Tối ưu hóa chi phí điện toán đám mây: Cẩm nang Rehost Migration (Phần 4 – Di trú: Hiện thực hóa kế hoạch tiết kiệm chi phí) 
+**Tác giả:** Dan Krueger, James Gaines, và Rohit Vaitheeswaran – 31/03/2025  
+**Chuyên mục:** AWS Cloud Financial Management, AWS Compute Optimizer, AWS Cost Explorer, Best Practices, Billing & Account Management, Cloud Cost Optimization, Customer Enablement, Enterprise Strategy, Thought Leadership  
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
+---  
 
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
+Bài viết này là phần thứ tư trong chuỗi bốn phần hướng dẫn từng bước cách tối ưu chi phí trong suốt quá trình Rehost migration trên AWS, cụ thể:  
+- Khám phá các thành phần chi phí và môi trường on-premises.  
+- Xây dựng business case chính xác trong giai đoạn assess.  
+- Hiểu và kiểm soát chi tiêu trên cloud trong giai đoạn mobilize.  
+- Tối ưu chi phí để đạt được các khoản tiết kiệm tài chính đã hoạch định trong giai đoạn migrate.  
 
----
+---  
 
-## Hướng dẫn kiến trúc
+**Hình 1:** Tổng quan hoạt động chi phí của quá trình Rehost Migration theo từng giai đoạn  
 
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
+---  
 
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
+## 1. Tối ưu chi phí trên AWS:  
+Chúng tôi sử dụng các dịch vụ AWS và công cụ cụ thể trong suốt quá trình Rehost migration để tối ưu hóa chi phí.  
+Các dịch vụ AWS này cung cấp đề xuất giúp tối ưu chi phí Amazon EC2 instances, chi phí lưu trữ (storage costs), và chi phí vận hành ứng dụng tổng thể (overall application run cost). Khoản tiết kiệm chi phí có thể tăng thêm vì quá trình migration và tối ưu hóa ban đầu được thực hiện dựa trên application performance metrics từ on-premises data center (bao gồm CPU, memory, disk I/O, và network). Việc tối ưu chi phí sau khi di trú (post-migration cost optimization) yêu cầu phân tích các số liệu sử dụng, vốn khác nhau tùy thuộc vào loại và kích cỡ của instance.  
 
-**Kiến trúc giải pháp bây giờ như sau:**
+---  
 
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
+### 1.1. Trang chủ AWS Billing and Cost Management  
+AWS Billing and Cost Management cung cấp các dịch vụ quan trọng để tối ưu chi phí trong suốt quá trình Rehost migration.  
+Nếu bạn đang sử dụng tổ chức AWS (AWS Organizations) với quản lí tài khoản (management account) để quản trị tập trung môi trường AWS, hãy cấu hình tài khoản thành viên (member accounts) truy cập các dịch vụ này theo nhu cầu và chính sách truy cập của tổ chức. Các dịch vụ này được áp dụng cho nhiều nhóm làm việc khác, không chỉ riêng các cost management stakeholders được chỉ định. AWS Billing and Cost Management console cung cấp thông tin tóm tắt, cho phép account owner có thể đi sâu vào từng danh mục cụ thể (specific category).  
 
----
+Landing page bao gồm các default widgets, cung cấp cái nhìn nhanh (quick view) về dự báo chi phí hiện tại (current forecast) so với các chi phí trong vài tháng gần đây.  
+Info tab hiển thị bản tóm tắt chi tiết (detailed summary) và giải thích nội dung mà mỗi widget cung cấp cho account owner.  
 
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
+Các tiện ích mặc định trong AWS Billing and Cost Management console bao gồm:  
+- **Tóm tắt chi phí (Cost Summary)** – Hiển thị xu hướng chi tiêu hiện tại so với mức chi của tháng trước. Các chi phí hiển thị tại đây không bao gồm khoản tín dụng và chiết khấu nào.  
+- **Giám sát chi phí (Cost Monitor)** – Hiển thị chi phí, ngân sách và các bất thường về chi phí được AWS phát hiện. Trạng thái bất thường về chi phí trong giám sát chi phí (Cost Monitor) được xác định dựa trên cấu hình trong giám sát chi phí (Cost Monitor), thuộc tab phát hiện chi phí bất thường (Cost Anomaly Detection).  
+- **Phân tích chi phí (Cost Breakdown)** – Bảng phân tích chi phí trong 6 tháng gần nhất để giúp hiểu rõ xu hướng và yếu tố chi phí. Nhóm chi phí theo các chỉ số như dịch vụ AWS, tài khoản thành viên, vùng, thẻ phân bố chi phí, và danh mục chi phí.  
+- **Hành động đề xuất (Recommended Actions)** – Cung cấp hướng dẫn cho chủ tài khoản AWS nhằm tuân thủ các thực tiễn quản lí tài chính đám mây (AWS cloud financial management best practices) và tối ưu chi phí dựa trên các đề xuất được đưa ra.  
+- **Cơ hội tiết kiệm (Savings Opportunities)** – Đưa ra các đề xuất từ trung tâm tối ưu hóa chi phí (Cost Optimization Hub) trong nhiều danh mục khác nhau, chẳng hạn như điều chỉnh kích thước, các loại phiên bản khác nhau, và khuyến nghị xóa bỏ các tài nguyên không được sử dụng trong tài khoản.  
 
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+---  
 
----
+### 1.2. AWS Cost Explorer  
+Tiện ích phân tích chi phí (Cost Breakdown widget) có thể mở rộng sang AWS Cost Explorer, cho phép chủ tài khoản và nhóm quản lý chi phí trực quan hóa, phân tích và quản lý chi tiêu trên AWS.  
+AWS Cost Explorer cung cấp các góc nhìn tổng quát và chi tiết về xu hướng chi tiêu. Lọc và dự báo để xác định các yếu tố chi phí và sự bất thường. Người dùng có thể tùy chỉnh báo cáo theo khoảng thời gian (giờ, ngày, tháng) và nhóm theo dịch vụ. Người dùng có thể lưu báo cáo trong thư viện để sử dụng lại trong tương lai.  
 
-## Lựa chọn công nghệ và phạm vi giao tiếp
+---  
 
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+### 1.3. Trung tâm tối ưu hóa chi phí AWS (AWS Cost Optimization Hub)  
+Trung tâm tối ưu chi phí AWS (AWS Cost Optimization Hub) cung cấp cái nhìn tổng quan về các cơ hội tối ưu hóa chi phí cho các EC2 instances đã được migrate.  
 
----
+**Hình 2:** Trung tâm Tối ưu Chi phí và Các Khuyến nghị  
 
-## The pub/sub hub
+Sau khi quá trình Rehost migration hoàn tất, hệ thống đưa ra khuyến nghị chuyển sang sử dụng Graviton instances để đạt được mức tiết kiệm chi phí bổ sung.  
+Ngoài ra, dựa trên các chỉ số sử dụng CPU và bộ nhớ, trung tâm tối ưu chi phí (Cost Optimization Hub) cũng sẽ đề xuất điều chỉnh kích thước phù hợp cho các instance, cũng như xóa bỏ những tài nguyên đang không hoạt động.  
 
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
+Khai thác trung tâm tối ưu chi phí (Cost Optimization Hub) giúp đội ngũ quản lý chi phí xác định, ưu tiên và triển khai các biện pháp tiết kiệm hiệu quả hơn, nâng cao quản lí tài chính đám mây, tối ưu hóa tài nguyên và mức tiết kiệm chi phí bổ sung ngoài phần tiết kiệm đã đạt được trong quá trình migration lên AWS.  
 
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
+---  
 
----
+### 1.4. Trình tối ưu hóa tính toán AWS (AWS Compute Optimizer)  
+AWS Compute Optimizer giúp giảm chi phí EC2 instances thông qua các đề xuất kích thước phù hợp. Công cụ này cung cấp tổng quan tiết kiệm, nâng cao hiệu năng và đề xuất tối ưu hóa theo từng vùng cho các tài nguyên sau:  
+- Amazon EC2  
+- Amazon EC2 Auto Scaling Groups  
+- Amazon EBS  
+- AWS Lambda functions  
+- Amazon ECS on AWS Fargate  
+- Commercial software licenses  
+- Amazon RDS DB instances and storage  
 
-## Core microservice
+Khi bật Compute Optimizer, AWS sẽ đánh giá tài nguyên bằng cách xem xét thông số kĩ thuật và mô hình sử dụng được ghi lại bởi Amazon CloudWatch trong 14 ngày gần nhất, bao gồm các chỉ số như mức sử dụng CPU, truyền mạng, hoạt động đĩa, mức độ sử dụng instance hiện tại.  
 
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
+---  
 
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
+## 2. Kết luận  
+Thiết lập quyền sở hữu chuyên trách và triển khai quy trình giám sát chi phí có hệ thống bằng cách sử dụng AWS Cost Explorer, AWS Budgets, và AWS Cost and Usage Reports.  
+Các công cụ này, khi được kết hợp với AWS Cost Optimization Hub và AWS Compute Optimizer, cung cấp các khuyến nghị hành động cho EC2 instances, bộ lưu trữ, và tối ưu hóa ứng dụng. Việc phân tích thường xuyên các mô hình sử dụng tài nguyên và triển khai các khuyến nghị về điều chỉnh kích thước giúp duy trì hiệu quả chi phí lâu dài, vượt ra ngoài khoản tiết kiệm ban đầu trong quá trình migration, tạo nên nền tảng cho việc tối ưu chi phí liên tục.  
 
----
+Trong bài viết này, chúng ta đã kết thúc hành trình tối ưu chi phí Rehost migration trong giai đoạn migrate bằng cách:  
+- Xem xét các dịch vụ có sẵn trong 1.1 AWS Billing and Cost Management Home;  
+- Sử dụng 1.2 AWS Cost Explorer để trực quan hóa và phân tích chi phí;  
+- Và xem xét 1.3 AWS Cost Optimization Hub cùng 1.4 AWS Compute Optimizer để nhận các khuyến nghị chi tiết về tối ưu chi phí và cơ hội điều chỉnh quy mô.  
 
-## Front door microservice
+---  
 
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
+## Chuỗi Blog  
+Liên kết trực tiếp đến từng bài viết trong chuỗi như sau:  
+- Phần 1: Assess – Explore Cost Components  
+- Phần 2: Assess – Build a Business Case  
+- Phần 3: Mobilize – Understand and Control Cloud Spend  
+- Phần 4: Migrate – Realizing Planned Savings  
 
----
+---  
 
-## Staging ER7 microservice
+## Tài nguyên bổ sung  
+Liên hệ với chuyên gia migration của AWS để trao đổi về cách chúng tôi có thể hỗ trợ tổ chức của bạn.  
+Đã sẵn sàng migrate và tối ưu hóa chi phí? Dưới đây là một số tài nguyên bổ sung:  
+- Xem qua AWS Cloud Financial Management Guide để điều chỉnh các quy trình tài chính của bạn, giúp chúng sẵn sàng cho môi trường cloud.  
+- Khám phá những nội dung mới nhất trong AWS Cloud Financial Management.  
+- Tìm hiểu thêm về cách thực hiện migration và hiện đại hóa với AWS.  
+- Hãy khám phá Amazon Q Developer — một trợ lý được hỗ trợ bởi AI (AI-powered assistant), giúp bạn chuyển đổi các workload .NET, mainframe, VMware, và Java, vượt ra ngoài mô hình Rehost truyền thống.  
 
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
+---  
 
----
+## Giới thiệu tác giả  
+**Dan Krueger** – Senior Customer Solutions Manager tại Amazon Web Services, có nhiều kinh nghiệm phục vụ khách hàng thuộc Chính phủ Liên bang Hoa Kỳ. Tại AWS, ông đã dẫn dắt nhiều dự án cloud migration quy mô lớn, giúp các cơ quan nâng cao năng lực thực thi nhiệm vụ. Trước đó, khi còn làm Program Executive tại IBM, Dan tập trung vào hiện đại hóa nền tảng dữ liệu và triển khai các giải pháp công nghệ phức tạp cho khách hàng chính phủ.  
 
-## Tính năng mới trong giải pháp
+**James Gaines** – Senior Solutions Architect trong lĩnh vực Healthcare and Life Sciences tại AWS. Ông có nền tảng làm việc trong các môi trường có quy định nghiêm ngặt như Department of Defense và pharmaceutical industry. James sở hữu toàn bộ AWS Certifications và chuyên về cloud migrations, application modernization, cùng phân tích nâng cao để thúc đẩy đổi mới trong lĩnh vực y tế và khoa học đời sống.  
 
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+**Rohit Vaitheeswaran** – Senior Solutions Architect tại AWS, chuyên về Healthcare and Life Sciences. Ông có kinh nghiệm đa ngành, từng dẫn dắt nhiều dự án migration strategy và cloud optimization initiatives quy mô lớn. Trong suốt sự nghiệp, Rohit đã giúp các tổ chức thuộc Financial Services, Fintech, và Healthcare tối ưu hành trình lên cloud của họ trên AWS, đặc biệt tập trung vào migration strategy và cost optimization, giúp khách hàng tối đa hóa khoản đầu tư cloud và tuân thủ các yêu cầu đặc thù của ngành.

@@ -53,8 +53,8 @@ graph LR;
 
     {{</*mermaid*/>}}
     sequenceDiagram
-        participant Alice
-        participant Bob
+        Attendee Alice
+        Attendee Bob
         Alice->>John: Hello John, how are you?
         loop Healthcheck
             John->John: Fight against hypochondria
@@ -69,8 +69,8 @@ renders as
 
 {{<mermaid>}}
 sequenceDiagram
-participant Alice
-participant Bob
+Attendee Alice
+Attendee Bob
 Alice->>John: Hello John, how are you?
 loop Healthcheck
 John->John: Fight against hypochondria
@@ -86,8 +86,8 @@ or you can use this alternative syntax:
 <pre>
 ```mermaid
 sequenceDiagram
-    participant Alice
-    participant Bob
+    Attendee Alice
+    Attendee Bob
     Alice->>John: Hello John, how are you?
     loop Healthcheck
         John->John: Fight against hypochondria
@@ -103,8 +103,8 @@ renders as
 
 ```mermaid
 sequenceDiagram
-    participant Alice
-    participant Bob
+    Attendee Alice
+    Attendee Bob
     Alice->>John: Hello John, how are you?
     loop Healthcheck
         John->John: Fight against hypochondria
