@@ -62,23 +62,11 @@ Gắn IAM permission policy sau vào tài khoản aws user của bạn để tri
       "Resource": "arn:aws:dynamodb:region:account-id:table/your-table-name"
     },
     {
-      "Sid": "MediaConvertPermissions",
+      "Sid": "SESPermissions",
       "Effect": "Allow",
       "Action": [
-        "mediaconvert:CreateJob",
-        "mediaconvert:DescribeJob",
-        "mediaconvert:ListJobs",
-        "mediaconvert:GetJob"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Sid": "SNSPermissions",
-      "Effect": "Allow",
-      "Action": [
-        "sns:Publish",
-        "sns:CreateTopic",
-        "sns:Subscribe"
+        "ses:SendEmail",
+        "ses:SendRawEmail"
       ],
       "Resource": "*"
     },
@@ -130,54 +118,47 @@ Workshop giả định người đọc có một số kiến thức cơ bản:
   - React hoặc một framework SPA tương tự.
 
 - **Kiến thức nền về Cloud và AWS**
-  - khái niệm region, account,
-  - hiểu sơ lược về dịch vụ managed (Cognito, Lambda, DynamoDB, S3,…),
-  - khái niệm cơ bản về IAM (identity, role, policy, least privilege).
+  - Khái niệm region, account,
+  - Hiểu sơ lược về dịch vụ managed (Cognito, Lambda, DynamoDB,…),
+  - Khái niệm cơ bản về IAM (identity, role, policy, least privilege).
 
-Báo cáo được viết sao cho vẫn có thể hiểu được **dù không trực tiếp deploy lên AWS**, nhưng những kiến thức trên sẽ giúp theo dõi kiến trúc dễ dàng hơn.
 
 ---
 
-## Công cụ và dịch vụ (nếu triển khai thực tế)
+## Công cụ và dịch vụ
 
-Nếu muốn tái hiện workshop trên tài khoản AWS thật, cần có:
+Để có thể tái hiện workshop trong một môi trường thực tế, bạn sẽ cần các công cụ và dịch vụ sau:
 
 - Một **tài khoản AWS** với quyền tạo:
-  - Amplify App,
-  - Cognito User Pool,
-  - Lambda Function,
-  - DynamoDB Table,
-  - S3 Bucket,
-  - SNS Topic,
-  - CloudWatch Alarm,
-  - IAM Role và Policy.
+  - AWS Amplify,
+  - Cognito User Pools,
+  - AWS Lambda,
+  - AWS DynamoDB,
+  - Các identity và configuration set của SES,
+  - CloudWatch,
+  - IAM roles và policies.
 
-- **Node.js và npm** cài trên máy local  
+- **Node.js và npm** cài đặt trên máy local  
   (để chạy và build frontend React).
 
-- **AWS CLI** đã được cấu hình profile/credential phù hợp.
+- **AWS CLI** đã được cấu hình với IAM user hoặc role có đủ quyền.
 
-- Tuỳ chọn, công cụ **Amplify CLI / Gen 2**  
-  để định nghĩa hạ tầng bằng code và kết nối project với Amplify.
+- (Tuỳ chọn) **Amplify CLI / Gen 2 tooling**  
+  để định nghĩa hạ tầng bằng code và kết nối dự án với Amplify.
 
 ---
 
 ## Mã nguồn và cấu trúc dự án
 
-Dự án English Journey được tổ chức gồm:
+Dự án English Journey được tổ chức như sau:
 
-- **Frontend React** – các trang Level Test, Dictionary, Vocabulary, My Learning, v.v.
-- Backend được định nghĩa thông qua **Amplify** – bao gồm Cognito, Lambda, DynamoDB, S3.
-- Các thành phần bổ sung: **MediaConvert, SNS, CloudWatch, WAF** hỗ trợ media, thông báo, giám sát và bảo mật.
+- Một **frontend React** (các trang như Level Test, Dictionary, Vocabulary, Quiz, Reading),
+- Backend được định nghĩa thông qua **Amplify** (Cognito, Lambda, DynamoDB),
+- Hạ tầng bổ sung cho **SES (email), CloudWatch và WAF**.
 
-Trong website Hugo của workshop này, nhóm chỉ trình bày:
 
-- sơ đồ kiến trúc,
-- giải thích thiết kế,
-- và một số đoạn mã minh hoạ.
+Các mục tiếp theo (từ 5.3 trở đi) sẽ dựa trên các điều kiện tiên quyết này và giải thích chi tiết hơn từng nhóm dịch vụ AWS.
 
-Người đọc **không bắt buộc** phải tạo tài nguyên thật trên AWS để hiểu được nội dung.  
-Các mục tiếp theo (từ 5.3 trở đi) sẽ lần lượt đi sâu vào từng nhóm dịch vụ AWS dựa trên các điều kiện tiên quyết ở trên.
 
 
 

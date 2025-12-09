@@ -1,13 +1,10 @@
 ---
 title: "Chia sẻ, đóng góp ý kiến"
-date: "2025-09-08"
+date: 2025-09-10
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 >Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud Journey, giúp team FCJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
 
@@ -33,12 +30,18 @@ Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về t
 
 
 ### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
+- Điều bạn **hài lòng nhất** trong thời gian thực tập?
+    * Mình hài lòng nhất với môi trường làm việc hỗ trợ và sự hướng dẫn rõ ràng từ mentor, giúp mình học hỏi và phát triển trong khi làm các công việc phù hợp với chuyên ngành.  
+- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?
+    * Cần tổ chức thêm các sự kiện giao lưu, kết nối ngoài giờ làm việc, và có các buổi phản hồi để theo dõi tiến trình và cải thiện.  
+- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?
+    * Có, mình sẽ khuyên họ thực tập ở đây. Môi trường làm việc hỗ trợ, cơ hội học hỏi và giờ làm việc linh hoạt là những điểm cộng lớn.  
 
 
 ### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
+- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?
+    * Nên có thêm các sự kiện xây dựng đội nhóm và các buổi phản hồi định kỳ để cải thiện trải nghiệm thực tập.  
 - Bạn có muốn tiếp tục chương trình này trong tương lai?
+    * Có, mình rất muốn tiếp tục. Kinh nghiệm trong kỳ thực tập rất quý giá và mình muốn có thêm cơ hội học hỏi.
 - Góp ý khác (tự do chia sẻ):
+    * Kỳ thực tập rất tuyệt vời. Nếu có thể mở rộng phạm vi công việc cho thực tập sinh, trải nghiệm sẽ hoàn thiện hơn.

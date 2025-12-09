@@ -1,14 +1,11 @@
 ---
 title: "Sharing and Feedback"
-date: "2025-09-08"
+date: 2025-09-10
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
 > Here, you can freely share your personal opinions about your experience participating in the First Cloud Journey program. This will help the FCJ team improve any shortcomings based on the following aspects:
 
@@ -35,13 +32,19 @@ The company provides an internship allowance and offers flexible working hours w
 ---
 
 ### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+- What did you find **most satisfying** during your internship?
+    * I was most satisfied with the supportive environment and clear guidance from my mentor, which allowed me to learn and grow while working on tasks related to my field of study.  
+- What do you think the company **should improve** for future interns?
+    * More networking or team bonding events outside of working hours, and regular feedback sessions to track progress and improvements.  
+- If recommending to a friend, would you **suggest they intern here**? Why or why not?
+    * Yes, I would recommend it. The supportive work environment, learning opportunities, and flexible working hours are great advantages.   
 
 ---
 
 ### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
+- Do you have any suggestions to improve the internship experience?
+    * More team-building events and regular feedback sessions would enhance the internship experience.  
+- Would you like to continue this program in the future?
+    * Yes, I would love to continue. The experience has been valuable, and I would like to gain more exposure.   
 - Any other comments (free sharing):
+    * The internship has been great overall. Expanding the scope of tasks for interns would make it even better. 

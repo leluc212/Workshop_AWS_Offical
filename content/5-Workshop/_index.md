@@ -20,9 +20,7 @@ pre: " <b> 5. </b> "
 
 **Progress Tracking:** Users can track their progress and completion of vocabulary lessons, with detailed reports generated through AWS Lambda and DynamoDB.
 
-**Notifications:** Real-time notifications via SNS will inform users about new lessons, progress milestones, account updates, or other updates.
-
-**Media Conversion:** If the platform includes video or audio content, AWS MediaConvert will handle media processing to ensure compatibility and smooth playback.
+**Notifications:** Email notifications via Amazon SES will inform users about new lessons, progress milestones, account updates, and other important changes.
 
 **Content Storage:** All learning materials are securely stored in Amazon S3 with proper access control.
 
@@ -43,8 +41,9 @@ pre: " <b> 5. </b> "
 1. [Workshop overview](5.1-Workshop-overview/)
 2. [Prerequiste](5.2-Prerequiste/)
 3. [Create Amplify](5.3-Create%20Amplify/)
-4. [MediaConvert](5.4-Create%20MediaConvert/)
-5. [SNS](5.5-Create%20SNS/)
+4. [AWS Cognito](5.4-AWS%20Cognito/)
+5. [Configure Amazon SES for email](5.5-Create%20SES/)
 6. [CloudWatch](5.6-Create%20Cloudwatch/)
 7. [IAM Roles - Policies](5.7-Create%20IAM%20Roles-Policies/)
-8. [Clean up](5.8-Cleanup/)
+8. [Configure Amazon Route 53](5.8-Route%2053/)
+9. [Clean up](5.9-Cleanup/)

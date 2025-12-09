@@ -26,7 +26,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 08/09/2025 to 08/12/2025
 
-![Your profile picture](/images/avatarme.png)
+<img src="/images/avatarme.png" alt="Ảnh đại diện của bạn" width="500">
 
 ### Report Content
 
