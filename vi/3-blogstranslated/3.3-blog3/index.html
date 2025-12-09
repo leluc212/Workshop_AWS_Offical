@@ -1,0 +1,2490 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="thienlh@thienlu.com" />
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>Blog 3 :: Báo cáo thực tập</title>
+
+    
+    <link href="../../../css/nucleus.css?1765277003" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1765277003" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1765277003" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1765277003" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1765277003" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1765277003" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1765277003" rel="stylesheet">
+    <link href="../../../css/theme.css?1765277003" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1765277003" rel="stylesheet">
+    
+    <link href="../../../css/theme-workshop.css?1765277003" rel="stylesheet">
+    
+    
+
+    <script src="../../../js/jquery-3.3.1.min.js?1765277003"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="../../../vi/3-blogstranslated/3.3-blog3/">
+    <nav id="sidebar" class="showVisitedLinks">
+  
+  
+
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="../../../">
+  <svg
+    id="Layer_1"
+    data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 60 30"
+    width="30%"
+  >
+    <defs>
+      <style>
+        .cls-1 {
+          fill: #fff;
+        }
+        .cls-2 {
+          fill: #f90;
+          fill-rule: evenodd;
+        }
+      </style>
+    </defs>
+    <title>AWS-Logo_White-Color</title>
+    <path
+      class="cls-1"
+      d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"
+    ></path>
+  </svg>
+</a>
+</div>
+    
+      <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1765277003"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1765277003"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/thienluhoan.github.io\/workshop-template\/\/vi";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1765277003"></script>
+
+    
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+          
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/"
+      title="Nhật ký công việc"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/">
+         <b> 1. </b> Nhật ký công việc
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+          
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.3-week3/"
+      title="Worklog Tuần 3"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.3-week3/">
+         <b> 1.3. </b> Worklog Tuần 3
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.4-week4/"
+      title="Worklog Tuần 4"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.4-week4/">
+         <b> 1.4. </b> Worklog Tuần 4
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.5-week5/"
+      title="Worklog Tuần 5"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.5-week5/">
+         <b> 1.5. </b> Worklog Tuần 5
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.6-week6/"
+      title="Worklog Tuần 6"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.6-week6/">
+         <b> 1.6. </b> Worklog Tuần 6
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.7-week7/"
+      title="Worklog Tuần 7"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.7-week7/">
+         <b> 1.7. </b> Worklog Tuần 7
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.8-week8/"
+      title="Worklog Tuần 8"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.8-week8/">
+         <b> 1.8. </b> Worklog Tuần 8
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.9-week9/"
+      title="Worklog Tuần 9"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.9-week9/">
+         <b> 1.9. </b> Worklog Tuần 9
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.2-week2/"
+      title="Worklog Tuần 2"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.2-week2/">
+         <b> 1.2. </b> Worklog Tuần 2
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.1-week1/"
+      title="Worklog Tuần 1"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.1-week1/">
+         <b> 1.1. </b> Worklog Tuần 1
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.10-week10/"
+      title="Worklog Tuần 10"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.10-week10/">
+         <b> 1.10. </b> Worklog Tuần 10
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.11-week11/"
+      title="Worklog Tuần 11"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.11-week11/">
+         <b> 1.11. </b> Worklog Tuần 11
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/1-worklog/1.12-week12/"
+      title="Worklog Tuần 12"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/1-worklog/1.12-week12/">
+         <b> 1.12 </b> Worklog Tuần 12
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+          
+        </ul>
+      
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/2-proposal/"
+      title="Bản đề xuất"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/2-proposal/">
+         <b> 2. </b> Bản đề xuất
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/3-blogstranslated/"
+      title="Các bài blogs đã dịch"
+      class="dd-item
+        parent
+        
+        "
+    >
+      <a href="../../../vi/3-blogstranslated/">
+         <b> 3. </b> Các bài blogs đã dịch
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+          
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/3-blogstranslated/3.1-blog1/"
+      title="Blog 1"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/3-blogstranslated/3.1-blog1/">
+         <b> 3.1. </b> Blog 1
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/3-blogstranslated/3.2-blog2/"
+      title="Blog 2"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/3-blogstranslated/3.2-blog2/">
+         <b> 3.2. </b> Blog 2
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/3-blogstranslated/3.3-blog3/"
+      title="Blog 3"
+      class="dd-item
+        
+        active
+        "
+    >
+      <a href="../../../vi/3-blogstranslated/3.3-blog3/">
+         <b> 3.3. </b> Blog 3
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+          
+        </ul>
+      
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/4-eventparticipated/"
+      title="Các events đã tham gia"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/4-eventparticipated/">
+         <b> 4. </b> Các events đã tham gia
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+          
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/4-eventparticipated/4.5-event5/"
+      title="Event 5"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/4-eventparticipated/4.5-event5/">
+         <b> 4.5. </b> Event 5
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/4-eventparticipated/4.4-event4/"
+      title="Event 4"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/4-eventparticipated/4.4-event4/">
+         <b> 4.4. </b> Event 4
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/4-eventparticipated/4.3-event3/"
+      title="Event 3"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/4-eventparticipated/4.3-event3/">
+         <b> 4.3. </b> Event 3
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/4-eventparticipated/4.2-event2/"
+      title="Event 2"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/4-eventparticipated/4.2-event2/">
+         <b> 4.2. </b> Event 2
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/4-eventparticipated/4.1-event1/"
+      title="Event 1"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/4-eventparticipated/4.1-event1/">
+         <b> 4.1. </b> Event 1
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+          
+        </ul>
+      
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/5-workshop/"
+      title="Workshop"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/5-workshop/">
+         <b> 5. </b> Workshop
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+          
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/5-workshop/5.1-workshop-overview/"
+      title="Giới thiệu"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/5-workshop/5.1-workshop-overview/">
+         <b> 5.1. </b> Giới thiệu
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/5-workshop/5.2-prerequiste/"
+      title="Các bước chuẩn bị"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/5-workshop/5.2-prerequiste/">
+         <b> 5.2. </b> Các bước chuẩn bị
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/5-workshop/5.3-create-amplify/"
+      title="Tạo backend với Amplify"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/5-workshop/5.3-create-amplify/">
+         <b> 5.3. </b> Tạo backend với Amplify
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/5-workshop/5.4-aws-cognito/"
+      title="Cấu hình AWS Cognito"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/5-workshop/5.4-aws-cognito/">
+          5.4.  Cấu hình AWS Cognito
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/5-workshop/5.5-create-ses/"
+      title="Cấu hình Amazon SES để gửi email thông báo"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/5-workshop/5.5-create-ses/">
+         <b> 5.5. </b> Cấu hình Amazon SES để gửi email thông báo
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/5-workshop/5.6-create-cloudwatch/"
+      title="Cấu hình Amazon CloudWatch"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/5-workshop/5.6-create-cloudwatch/">
+         <b> 5.6. </b> Cấu hình Amazon CloudWatch
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/5-workshop/5.7-create-iam-roles-policies/"
+      title="IAM Roles &amp; Policies"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/5-workshop/5.7-create-iam-roles-policies/">
+         <b> 5.7. </b> IAM Roles &amp; Policies
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/5-workshop/5.8-route-53/"
+      title="Cấu hình Amazon Route 53"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/5-workshop/5.8-route-53/">
+         <b> 5.8. </b> Cấu hình Amazon Route 53
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+              
+                
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/5-workshop/5.9-cleanup/"
+      title="Dọn dẹp tài nguyên"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/5-workshop/5.9-cleanup/">
+         <b> 5.9. </b> Dọn dẹp tài nguyên
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+              
+            
+          
+        </ul>
+      
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/6-self-evaluation/"
+      title="Tự đánh giá"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/6-self-evaluation/">
+         <b> 6. </b> Tự đánh giá
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+  
+    
+    <li
+      data-nav-id="/vi/7-feedback/"
+      title="Chia sẻ, đóng góp ý kiến"
+      class="dd-item
+        
+        
+        "
+    >
+      <a href="../../../vi/7-feedback/">
+         <b> 7. </b> Chia sẻ, đóng góp ý kiến
+        
+          <i class="fas fa-check read-icon"></i>
+        
+      </a>
+
+      
+      
+    </li>
+  
+
+
+        
+      
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+            <li>
+              <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    
+      <section id="prefooter">
+        <hr />
+        <ul>
+          
+            <li>
+              <a class="padding">
+                <i class="fas fa-language fa-fw"></i>
+                <div class="select-style">
+                  <select id="select-language" onchange="location = this.value;">
+                    
+                    
+
+                    
+                      
+                      
+                        
+                          
+                            <option value="https://thienluhoan.github.io/workshop-template/3-blogstranslated/3.3-blog3/">English</option>
+                          
+                        
+                      
+                        
+                      
+                    
+                      
+                      
+                        
+                      
+                        
+                          
+                            <option value="https://thienluhoan.github.io/workshop-template/vi/3-blogstranslated/3.3-blog3/" selected>Tiếng Việt</option>
+                          
+                        
+                      
+                    
+
+                  </select>
+                  
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="255px" height="255px" viewBox="0 0 255 255" xml:space="preserve">
+                    <g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g>
+                  </svg>
+                </div>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a class="padding" href="#" data-clear-history-toggle="">
+                <i class="fas fa-history fa-fw"></i> Clear History
+              </a>
+            </li>
+          
+        </ul>
+      </section>
+    
+
+    <section id="footer"><left>
+    
+    <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Migrate" Alt="web counter" border="0" /></a> <br>
+    <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Total CLoud Journey" Alt="web counter" border="0" />
+
+</left>
+<left>
+    <br>
+    <br>
+    <b>Last Updated</b><br>
+    <i>
+        <span id="lastUpdated" style="color:orange;"></span>
+    </i>
+
+    <script>
+        
+        const today = new Date();
+        
+        const formattedDate = today.toLocaleDateString('en-GB');
+        
+        document.getElementById('lastUpdated').textContent = formattedDate;
+    </script>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud Journey </a> <br>
+
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</section>
+  </div>
+</nav>
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../../vi/'>Báo cáo thực tập</a> > <a href='../../../vi/3-blogstranslated/'>Các bài blogs đã dịch</a> > Blog 3
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#bắt-đầu-với-apache-ofbiz-và-amazon-aurora-dsql">Bắt đầu với Apache OFBiz và Amazon Aurora DSQL</a></li>
+    <li><a href="#ứng-dụng">Ứng dụng</a></li>
+    <li><a href="#aurora-dsql">Aurora DSQL</a></li>
+    <li><a href="#tạo-cấu-hình-nguồn-dữ-liệu-cho-aurora-dsql">Tạo cấu hình nguồn dữ liệu cho Aurora DSQL</a>
+      <ul>
+        <li><a href="#triển-khai-logic-kết-nối-cho-aurora-dsql">Triển khai logic kết nối cho Aurora DSQL</a></li>
+        <li><a href="#chỉnh-sửa-lược-đồ">Chỉnh sửa lược đồ</a></li>
+        <li><a href="#tải-dữ-liệu-demo">Tải dữ liệu demo</a></li>
+        <li><a href="#kết-luận">Kết luận</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Blog 3
+            </h1>
+          
+
+        
+
+
+
+	<h1 id="blog-cơ-sở-dữ-liệu-aws">Blog Cơ sở dữ liệu AWS</h1>
+<h2 id="bắt-đầu-với-apache-ofbiz-và-amazon-aurora-dsql">Bắt đầu với Apache OFBiz và Amazon Aurora DSQL</h2>
+<p><strong>Tác giả:</strong> James Morle | <strong>Ngày:</strong> 26 tháng 3 năm 2025 | <strong>Chuyên mục:</strong> Advanced (300), Amazon Aurora, Best Practices, DSQL, Technical How-to</p>
+<hr>
+<p>Khi thiết kế Amazon Aurora DSQL, chúng tôi đã dành rất nhiều thời gian để tìm ra sự cân bằng phù hợp giữa đổi mới và cải tiến so với tính dễ sử dụng. Chúng tôi không muốn làm thay đổi những gì quen thuộc đối với người dùng PostgreSQL hiện tại trừ khi có lý do thực sự thuyết phục. Hai lĩnh vực thuộc nhóm này là hành vi kiểm soát đồng thời lạc quan (Optimistic Concurrency Control – OCC) và mô hình xác thực (authentication model), nơi mà hành vi của hệ thống có thể khiến các nhà phát triển ứng dụng quen thuộc với PostgreSQL cảm thấy khác lạ.</p>
+<p>Trong bài viết này, chúng tôi sẽ trình bày một ví dụ thực tế về cách chuyển đổi một ứng dụng hiện có vốn hoạt động trên cơ sở dữ liệu PostgreSQL sang hoạt động với cơ sở dữ liệu Aurora DSQL. Thêm vào đó việc điều chỉnh để thích ứng với các khía cạnh đã đề cập, chúng tôi cũng sẽ xử lý một số vấn đề không tương thích về kiểu dữ liệu và tìm cách khắc phục một vài giới hạn hiện tại còn tồn tại trong Aurora DSQL.</p>
+<hr>
+<h2 id="ứng-dụng">Ứng dụng</h2>
+<p>Để làm cho ví dụ này mang tính đại diện nhất có thể, chúng tôi đã chọn một ứng dụng mã nguồn mở có tính đa dạng chức năng cao và độ phức tạp đáng kể, phản ánh đúng các ứng dụng thực tế. Ứng dụng đó là Apache OFBiz, và mã nguồn có thể được tải xuống từ kho lưu trữ GitHub. Phiên bản được sử dụng trong bằng chứng khái niệm này là 18.12.16.</p>
+<p>Ứng dụng OFBiz là một gói ERP và CRM đầy đủ tính năng, và là một ví dụ điển hình cho mục tiêu của chúng tôi ở đây:</p>
+<ul>
+<li>Lược đồ phức tạp: 837 bảng, 4161 chỉ mục</li>
+<li>Công cụ thực thể trừu tượng hóa (Java Persistence, Java Transactions, custom ORM)</li>
+<li>Đã hỗ trợ PostgreSQL</li>
+<li>Dữ liệu demo và chức năng nạp dữ liệu tích hợp sẵn</li>
+<li>Phần lớn dựa trên mô hình quan hệ, phù hợp với trọng tâm tương thích ban đầu của Aurora DSQL</li>
+</ul>
+<p>Mục đích của bài viết này là kết hợp phần mô tả quá trình thử nghiệm nội bộ với một số ví dụ mã cụ thể về cách tiếp cận xác thực Aurora DSQL trong ứng dụng connection pool-based Java. Mặc dù chúng tôi cung cấp nhiều ngữ cảnh nhất có thể, nhưng không nhằm mục đích cung cấp một tập lệnh và mã đầy đủ để tái tạo toàn bộ quá trình này.</p>
+<hr>
+<h2 id="aurora-dsql">Aurora DSQL</h2>
+<p>Aurora DSQL là một cơ sở dữ liệu tương thích với PostgreSQL, nhưng có một vài khác biệt về mặt ngữ nghĩa nhằm cải thiện khả năng mở rộng và bảo mật của dịch vụ so với PostgreSQL cộng đồng. Một số khía cạnh trong đó, đặc biệt là mức độ tương thích chức năng rộng với các tính năng PostgreSQL, sẽ phát triển nhanh chóng theo thời gian, nhưng một số ít yếu tố là cốt lõi của hệ thống. Đây là trọng tâm của các thay đổi được thực hiện trong ứng dụng OFBiz và được trình bày trong bài viết này. Những khía cạnh đó bao gồm:</p>
+<ul>
+<li>Mô hình xác thực Aurora DSQL – Cách kết nối và duy trì kết nối với cơ sở dữ liệu.</li>
+<li>Giới hạn kích thước giao dịch – Aurora DSQL không hỗ trợ các giao dịch có kích thước không giới hạn.</li>
+<li>Mức độ cô lập (Isolation level) – Aurora DSQL chỉ hỗ trợ snapshot isolation, tương đương với repeatable read trong PostgreSQL.</li>
+<li>Kiểm soát đồng thời lạc quan (Optimistic concurrency control) – Aurora DSQL không khóa tài nguyên trong giai đoạn xây dựng giao dịch; nó đảm bảo tính nhất quán khi commit. Điều này có nghĩa là một số commit có thể thất bại và phải được thực hiện lại từ đầu.</li>
+<li>Giới hạn kiểu dữ liệu trong khóa – Hiện tại, có một số giới hạn về kiểu dữ liệu (và kích thước) được hỗ trợ trong khóa chính và khóa phụ. Các giới hạn này sẽ giảm dần theo thời gian khi Aurora DSQL bổ sung thêm các kiểu dữ liệu mới. Các biện pháp khắc phục được trình bày trong bài viết này phản ánh các giới hạn tồn tại trong giai đoạn Preview của Aurora DSQL.</li>
+</ul>
+<hr>
+<h2 id="tạo-cấu-hình-nguồn-dữ-liệu-cho-aurora-dsql">Tạo cấu hình nguồn dữ liệu cho Aurora DSQL</h2>
+<p>Điều đầu tiên chúng tôi cần làm là định nghĩa một cấu hình nguồn dữ liệu (data source) mới cho cơ sở dữ liệu Aurora DSQL. Chúng tôi đã thêm một nguồn dữ liệu mới có tên là <code>localdsql</code> trong tệp <code>framework/entity/config/entityengine.xml</code> và chọn nó làm nguồn dữ liệu đang hoạt động (active data source). Các tham số của nguồn dữ liệu được sao chép từ nguồn dữ liệu hiện có <code>localpostgres</code>, với các thiết lập được gạch dưới thay đổi như sau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;group-map</span> <span style="color:#a6e22e">group-name=</span><span style="color:#e6db74">&#34;org.apache.ofbiz&#34;</span> <span style="color:#a6e22e">datasource-name=</span><span style="color:#e6db74">&#34;localdsql&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/datasource&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;datasource</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;localdsql&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">helper-class=</span><span style="color:#e6db74">&#34;org.apache.ofbiz.entity.datasource.GenericHelperDAO&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">schema-name=</span><span style="color:#e6db74">&#34;ofbiz&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">field-type-name=</span><span style="color:#e6db74">&#34;postgres&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">check-on-start=</span><span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">add-missing-on-start=</span><span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">use-fk-initially-deferred=</span><span style="color:#e6db74">&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">alias-view-columns=</span><span style="color:#e6db74">&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">join-style=</span><span style="color:#e6db74">&#34;ansi&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">use-binary-type-for-blob=</span><span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">use-order-by-nulls=</span><span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">result-fetch-size=</span><span style="color:#e6db74">&#34;50&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;read-data</span> <span style="color:#a6e22e">reader-name=</span><span style="color:#e6db74">&#34;tenant&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;read-data</span> <span style="color:#a6e22e">reader-name=</span><span style="color:#e6db74">&#34;seed&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;read-data</span> <span style="color:#a6e22e">reader-name=</span><span style="color:#e6db74">&#34;seed-initial&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;group-map</span> <span style="color:#a6e22e">group-name=</span><span style="color:#e6db74">&#34;org.apache.ofbiz&#34;</span> <span style="color:#a6e22e">datasource-name=</span><span style="color:#e6db74">&#34;localdsql&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/datasource&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;datasource</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;localdsql&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">helper-class=</span><span style="color:#e6db74">&#34;org.apache.ofbiz.entity.datasource.GenericHelperDAO&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">schema-name=</span><span style="color:#e6db74">&#34;ofbiz&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">field-type-name=</span><span style="color:#e6db74">&#34;postgres&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">check-on-start=</span><span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">add-missing-on-start=</span><span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">use-fk-initially-deferred=</span><span style="color:#e6db74">&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">alias-view-columns=</span><span style="color:#e6db74">&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">join-style=</span><span style="color:#e6db74">&#34;ansi&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">use-binary-type-for-blob=</span><span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">use-order-by-nulls=</span><span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">result-fetch-size=</span><span style="color:#e6db74">&#34;50&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;read-data</span> <span style="color:#a6e22e">reader-name=</span><span style="color:#e6db74">&#34;tenant&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;read-data</span> <span style="color:#a6e22e">reader-name=</span><span style="color:#e6db74">&#34;seed&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;read-data</span> <span style="color:#a6e22e">reader-name=</span><span style="color:#e6db74">&#34;seed-initial&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/datasource&gt;</span>
+</span></span></code></pre></div><p>Trong ví dụ cấu hình ở phần trước, chúng tôi đã ẩn phần endpoint của jdbc-uri— nếu bạn tự thực hiện trên cụm (cluster) của mình, đừng quên cập nhật giá trị <Aurora DSQL_URL> để phản ánh đúng endpoint của cụm Aurora DSQL mà bạn đang dùng.<br>
+Chúng tôi đặt giá trị jdbc-password thành hằng số đặc biệt IAM_AUTH. OFBiz mặc định giả định rằng chúng ta sẽ sử dụng xác thực bằng mật khẩu thông thường để kết nối cơ sở dữ liệu, nhưng Aurora DSQL yêu cầu cơ chế xác thực dựa trên AWS Identity and Access Management (IAM), nhằm cung cấp một môi trường tích hợp và an toàn hơn. Chúng tôi sẽ thêm hỗ trợ cho cơ chế này trong phần code ở bước tiếp theo.<br>
+Chúng tôi cũng thay đổi mức cô lập (isolation level) thành RepeatableRead (đây là hành vi tương đương trong PostgreSQL với mức snapshot isolation của Aurora DSQL) và tăng kích thước nhóm tối thiểu (kết nối trong Aurora DSQL rẻ để duy trì, nhưng kết nối mã hóa thì tương đối chậm để khởi tạo). Aurora DSQL chỉ hỗ trợ kết nối mã hóa, vì vậy chúng tôi đã thêm tham số này vào chuỗi JDBC URI. Chúng tôi cũng triển khai phiên bản mới nhất của driver PG JDBC (42.7.4 tại thời điểm viết) để đảm bảo đây là phiên bản được chứng nhận tương thích với Aurora DSQL.</p>
+<h3 id="triển-khai-logic-kết-nối-cho-aurora-dsql">Triển khai logic kết nối cho Aurora DSQL</h3>
+<p>Có ba yếu tố cần xem xét khi xây dựng logic kết nối cho Aurora DSQL:<br>
+• Mật khẩu thực tế là token xác thực động, được tạo theo yêu cầu khi cơ chế xác thực IAM được xác minh.<br>
+• Token xác thực có thời hạn — chúng chỉ hợp lệ trong khoảng thời gian được chỉ định khi tạo ra. Thời hạn này có thể lên đến một tuần, phù hợp khi dùng cho các công cụ phát triển, nhưng đối với ứng dụng thực tế, chúng tôi khuyến nghị thời hạn ngắn hơn nhiều để giảm nguy cơ truy cập trái phép. Chúng tôi chọn thời hạn 3 giờ trong trường hợp này.<br>
+• Kết nối cũng có thời hạn, hiện tại mỗi giờ. Sự tương tác giữa token xác thực và thời hạn kết nối có thể gây nhầm lẫn với người dùng mới của Aurora DSQL, nên cần nhớ token xác thực chỉ được áp dụng khi tạo một kết nối (token phải vẫn còn hiệu lực tại thời điểm tạo kết nối) và thời hạn kết nối chỉ ảnh hưởng đến các kết nối hiện có (không phụ thuộc vào thời hạn của token sau khi kết nối được thiết lập).</p>
+<p>Để hỗ trợ cơ chế này, chúng tôi chỉnh sửa tệp<br>
+<code>framework/entity/src/main/java/org/apache/ofbiz/entity/config/model/EntityConfig.java</code> để thêm luồng xác thực riêng cho Aurora DSQL, bổ sung logic sau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">getJdbcPassword</span>(InlineJdbc inlineJdbcElement) <span style="color:#66d9ef">throws</span> GenericEntityConfException {
+</span></span><span style="display:flex;"><span>    String jdbcPassword <span style="color:#f92672">=</span> inlineJdbcElement.<span style="color:#a6e22e">getJdbcPassword</span>();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>   <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>jdbcPassword.<span style="color:#a6e22e">isEmpty</span>() <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span> jdbcPassword.<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;IAM_AUTH&#34;</span>)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> jdbcPassword;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>   <span style="color:#66d9ef">if</span> (jdbcPassword.<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;IAM_AUTH&#34;</span>)) {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        <span style="color:#66d9ef">return</span> DSQLAuth.<span style="color:#a6e22e">generateToken</span>(inlineJdbcElement.<span style="color:#a6e22e">getJdbcUri</span>().<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>)<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>, 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>            Region.<span style="color:#a6e22e">US_EAST_1</span>, 
+</span></span></code></pre></div><p>Sau đó, chúng tôi chỉnh sửa tệp
+framework/entity/src/main/java/org/apache/ofbiz/entity/connection/DBCPConnectionFactory.java để sử dụng ConnectionFactory dành riêng cho Aurora DSQL khi data source là localdsql. Chúng tôi cũng đặt thời gian tồn tại tối đa của kết nối (maximum connection lifetime) trong nhóm ngắn hơn một chút so với thời gian kết nối tối đa được hỗ trợ trong Aurora DSQL.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>      <span style="color:#75715e">// create the connection factory</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        org.<span style="color:#a6e22e">apache</span>.<span style="color:#a6e22e">commons</span>.<span style="color:#a6e22e">dbcp2</span>.<span style="color:#a6e22e">ConnectionFactory</span> cf <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        <span style="color:#66d9ef">if</span> (cacheKey.<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;localdsql&#34;</span>)) {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>           cf <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DSQLConnectionFactory(jdbcDriver, jdbcUri, cfProps);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>           cf <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DriverConnectionFactory(jdbcDriver, jdbcUri, cfProps);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>         <span style="color:#75715e">// wrap it with a LocalXAConnectionFactory</span>
+</span></span><span style="display:flex;"><span>         XAConnectionFactory xacf <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LocalXAConnectionFactory(txMgr, cf);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>         <span style="color:#75715e">// create the pool object factory</span>
+</span></span><span style="display:flex;"><span>         PoolableConnectionFactory factory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PoolableManagedConnectionFactory(xacf, <span style="color:#66d9ef">null</span>);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        ((PoolableManagedConnectionFactory)factory).<span style="color:#a6e22e">setMaxConnLifetimeMillis</span>((<span style="color:#66d9ef">long</span>)55<span style="color:#f92672">*</span>60<span style="color:#f92672">*</span>1000);
+</span></span><span style="display:flex;"><span>         factory.<span style="color:#a6e22e">setValidationQuery</span>(jdbcElement.<span style="color:#a6e22e">getPoolJdbcTestStmt</span>());
+</span></span></code></pre></div><p>Cuối cùng, chúng tôi thêm phần logic cốt lõi để quản lý các kết nối, bao gồm việc thêm Aurora DSQL SessionId vào thuộc tính của kết nối nhằm hỗ trợ việc chẩn đoán tốt hơn. Khi cần liên hệ với AWS Support để xử lý các vấn đề liên quan đến Aurora DSQL, việc cung cấp Session ID của kết nối cụ thể gặp sự cố sẽ rất hữu ích.
+Chúng tôi đã triển khai các lớp cụ thể (concrete classes) sau đây:</p>
+<ul>
+<li>framework/entity/src/main/java/org/apache/ofbiz/entity/connection/Aurora DSQLAuth.java</li>
+<li>framework/entity/src/main/java/org/apache/ofbiz/entity/connection/Aurora DSQLConnectionFactory.java</li>
+<li>framework/entity/src/main/java/org/apache/ofbiz/entity/connection/Aurora DSQLConnection.java</li>
+</ul>
+<h3 id="chỉnh-sửa-lược-đồ">Chỉnh sửa lược đồ</h3>
+<p>Chúng tôi thực hiện các thay đổi tối thiểu đối với lược đồ cơ sở dữ liệu để tuân thủ các giới hạn hiện đang áp dụng cho Aurora DSQL. Phần lớn lược đồ ban đầu đã tương thích với Aurora DSQL, nhưng chúng tôi có thể thực hiện nhiều điều chỉnh hơn nếu không cần giữ lại dữ liệu demo hiện có (vấn đề này sẽ được nói rõ hơn ở các phần sau).
+Các giới hạn cần khắc phục đều liên quan đến kiểu dữ liệu được hỗ trợ trong khóa (key) của Aurora DSQL:</p>
+<ul>
+<li>Kiểu NUMERIC hiện chưa được hỗ trợ trong khóa:
+<ul>
+<li>Chúng tôi chỉnh sửa applications/datamodel/entitydef/product-entitymodel.xml, đổi kiểu dữ liệu của minimumOrderQuantity sang floating-point (float) thay vì fixed-point (NUMERIC(18,6)). Nói chung, hai kiểu này không hoàn toàn tương đương về mặt logic, nhưng dữ liệu demo lại dùng kiểu dữ liệu thập phân. Một thay đổi tốt hơn ở đây sẽ là thay đổi dữ liệu demo, nhưng trong trường hợp này, logic vẫn hoạt động đúng (vì chỉ dùng phép so sánh “lớn hơn”).</li>
+<li>Chúng tôi chỉnh sửa framework/entity/fieldtype/fieldtypepostgres.xml để thay đổi định nghĩa của <field-type-def type="numeric" sql-type="NUMERIC(20,0)" java-type="Long"/>  thành  <field-type-def type="numeric" sql-type="bigint" java-type="Long"/>. Việc dùng bigint ở đây thực tế phù hợp hơn so với NUMERIC(20,0).</li>
+</ul>
+</li>
+<li>Kiểu VARCHAR được hỗ trợ trong keys, nhưng kích thước tối đa nhỏ hơn so với VARCHAR thông thường:
+<ul>
+<li>Chúng tôi chỉnh sửa framework/entity/fieldtype/fieldtypepostgres.xml, để đổi định nghĩa của <field-type-def type="email" sql-type="VARCHAR(320)" java-type="String"/> thành <field-type-def type="email" sql-type="VARCHAR(220)" java-type="String"/>.</li>
+</ul>
+</li>
+</ul>
+<p>Sau khi thực hiện các thay đổi này, lược đồ (schema) đã có thể được tạo thành công trong quá trình tải dữ liệu (xem chi tiết ở phần tiếp theo). Chúng tôi sử dụng tùy chọn -l drop-constraints trong tiện ích OFBiz loader để đảm bảo rằng không có bảng nào được tạo bằng cách sử dụng ràng buộc khóa ngoại (foreign key constraints), những foreign key constraints này hiện tại chưa được hỗ trợ trong Aurora DSQL.</p>
+<p>Như đã đề cập trước đó, chúng tôi có thể tối ưu hóa lược đồ sâu hơn. Một thay đổi đáng chú ý mà chúng tôi không cần thực hiện là chuyển kiểu dữ liệu của các trường ID sang UUID, điều vốn phổ biến trong ứng dụng sử dụng ORM. Bởi vì chúng tôi đang sử dụng dữ liệu demo, chúng tôi sẽ cần phải sửa đổi tất cả các khóa (và tham chiếu) trong dữ liệu demo để áp dụng các kiểu UUID.  Thay vào đó, chúng tôi giữ nguyên kiểu khóa dựa trên VARCHAR và tải dữ liệu demo mà không cần thay đổi.</p>
+<h3 id="tải-dữ-liệu-demo">Tải dữ liệu demo</h3>
+<p>OFBiz data loader (xem OFBiz Technical Setup Guide) ban đầu thực hiện một số lượng lớn thao tác chèn trước mỗi lần commit, khiến một số giao dịch vượt quá giới hạn kích thước transaction trong Aurora DSQL trong một số trường hợp. Để khắc phục vấn đề này, chúng tôi chỉnh sửa phương thức storeAll() trong file
+<code>framework/entity/src/main/java/org/apache/ofbiz/entity/GenericDelegator.java</code> để chia quá trình tải dữ liệu hàng loạt thành các lô có thể tải dữ liệu 1.000 dòng mỗi lần.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>              numberChanged <span style="color:#f92672">+=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">store</span>(toStore);
+</span></span><span style="display:flex;"><span>                 }
+</span></span><span style="display:flex;"><span>             }
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>            <span style="color:#75715e">// commit every 1000 rows to conform to DSQL transaction limits</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>            <span style="color:#66d9ef">if</span> (numberChanged<span style="color:#f92672">%</span>1000 <span style="color:#f92672">==</span> 0) {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                <span style="color:#66d9ef">if</span> (Debug.<span style="color:#a6e22e">verboseOn</span>()) Debug.<span style="color:#a6e22e">logVerbose</span>(<span style="color:#e6db74">&#34;Committing at 1000 row threshold. beganTransaction=&#34;</span> <span style="color:#f92672">+</span> beganTransaction, module);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                TransactionUtil.<span style="color:#a6e22e">commit</span>();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                beganTransaction <span style="color:#f92672">=</span> TransactionUtil.<span style="color:#a6e22e">begin</span>();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>            }
+</span></span><span style="display:flex;"><span>         }
+</span></span><span style="display:flex;"><span>         TransactionUtil.<span style="color:#a6e22e">commit</span>(beganTransaction);
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">return</span> numberChanged;
+</span></span></code></pre></div><p><strong>Lưu ý:</strong> Giới hạn kích thước transaction trong Aurora DSQL thực tế lớn hơn 1.000 dòng, nhưng chúng tôi chọn giá trị nhỏ hơn này để dễ dàng quan sát hành vi batching (xử lý theo lô) sau khi thay đổi logic.
+Chúng tôi cũng sửa một lỗi khác khá thú vị trong quá trình dò tìm. Một phần của logic tải dữ liệu gọi đến hàm findKey() trong file
+<code>framework/entity/src/main/java/org/apache/ofbiz/entity/util/EntityCrypto.java</code> để kiểm tra sự tồn tại của khóa mã hóa (crypto key) trong cơ sở dữ liệu. Nếu khóa này không tồn tại ở vị trí mong đợi, quá trình tải dữ liệu sẽ dừng lại và báo lỗi. Khi thử nghiệm với Aurora DSQL, điều kiện bất biến này luôn bị kích hoạt. Sau khi tìm hiểu kỹ, chúng tôi phát hiện có một lỗi logic tổng quát, dẫn đến sự khác biệt trong hành vi giữa hai mức cô lập giao dịch read committed và repeatable read. Phương thức findKey() được gọi mà không bắt đầu một transaction mới, nên nó chỉ nhìn thấy dữ liệu tại thời điểm snapshot của transaction hiện tại. Vì snapshot đó xảy ra trước khi lệnh INSERT tương ứng được commit, nên findKey() không thể thấy dòng dữ liệu vừa được chèn. Trong mức cô lập read committed, lời gọi findKey() hoạt động bình thường vì session có thể thấy dữ liệu đã commit kể từ khi transaction bắt đầu.
+Để khắc phục, chúng tôi bắt đầu một transaction mới mỗi khi hàm findKey() được gọi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>GenericValue keyValue <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>            keyValue <span style="color:#f92672">=</span> TransactionUtil.<span style="color:#a6e22e">doNewTransaction</span>(() <span style="color:#f92672">-&gt;</span> {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                <span style="color:#66d9ef">return</span> EntityQuery.<span style="color:#a6e22e">use</span>(delegator).<span style="color:#a6e22e">from</span>(<span style="color:#e6db74">&#34;EntityKeyStore&#34;</span>).<span style="color:#a6e22e">where</span>(<span style="color:#e6db74">&#34;keyName&#34;</span>, hashedKeyName).<span style="color:#a6e22e">queryOne</span>();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>            }, <span style="color:#e6db74">&#34;checking encrypted key&#34;</span>, 0, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        } <span style="color:#66d9ef">catch</span> (GenericEntityException e) {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> EntityCryptoException(e);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        }
+</span></span><span style="display:flex;"><span>     } <span style="color:#66d9ef">catch</span> (GenericEntityException e) {
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> EntityCryptoException(e);
+</span></span><span style="display:flex;"><span>     }
+</span></span></code></pre></div><p>Chúng tôi đã tải dữ liệu khởi tạo (seed) và dữ liệu minh họa (demo) theo hướng dẫn trong tài liệu thiết lập kỹ thuật của OFBiz (OFBiz Technical Setup Guide).
+Xử lý OCC aborts trong transaction command pattern
+Ứng dụng OFBiz gửi các giao dịch (transactions) đến cơ sở dữ liệu bằng mẫu lệnh (command pattern) — sử dụng giao diện Callable — giúp việc xử lý các giao dịch của Aurora DSQL trở nên đơn giản hơn. Các ứng dụng khác (ngoài OFBiz) nếu cũng đóng gói toàn bộ giao dịch theo cách này thì việc quản lý cũng tương tự, vì ranh giới của từng giao dịch đều được xác định rõ ràng. Tất cả những gì cần thực hiện ở đây, ít nhất là cho mục đích minh họa, là thêm một vòng lặp retry quanh phần thực thi giao dịch. Vòng lặp này được đặt trong tệp:
+<code>framework/entity/src/main/java/org/apache/ofbiz/entity/transaction/TransactionUtil.java</code> trong phương thức InTransaction.call().</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> <span style="color:#a6e22e">InTransaction</span>(Callable<span style="color:#f92672">&lt;</span>V<span style="color:#f92672">&gt;</span> callable, String ifErrorMessage, <span style="color:#66d9ef">int</span> timeout, <span style="color:#66d9ef">boolean</span> printException) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">callable</span> <span style="color:#f92672">=</span> callable;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">ifErrorMessage</span> <span style="color:#f92672">=</span> ifErrorMessage;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">timeout</span> <span style="color:#f92672">=</span> timeout;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">printException</span> <span style="color:#f92672">=</span> printException;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> V <span style="color:#a6e22e">call</span>() <span style="color:#66d9ef">throws</span> GenericEntityException {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>       <span style="color:#66d9ef">boolean</span> transactionComplete <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>       <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>transactionComplete) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">boolean</span> tx <span style="color:#f92672">=</span> TransactionUtil.<span style="color:#a6e22e">begin</span>(timeout);
+</span></span><span style="display:flex;"><span>            Throwable transactionAbortCause <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> callable.<span style="color:#a6e22e">call</span>();
+</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">catch</span> (Throwable t) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">while</span> (t.<span style="color:#a6e22e">getCause</span>() <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>                        t <span style="color:#f92672">=</span> t.<span style="color:#a6e22e">getCause</span>();
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">throw</span> t;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (Error <span style="color:#f92672">|</span> RuntimeException e) {
+</span></span><span style="display:flex;"><span>                transactionAbortCause <span style="color:#f92672">=</span> e;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throw</span> e;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (Throwable t) {
+</span></span><span style="display:flex;"><span>                transactionAbortCause <span style="color:#f92672">=</span> t;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>               <span style="color:#66d9ef">if</span> (t <span style="color:#66d9ef">instanceof</span> SQLException <span style="color:#f92672">&amp;&amp;</span> (((SQLException) t).<span style="color:#a6e22e">getSQLState</span>().<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#34;OC&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                       <span style="color:#f92672">||</span> ((SQLException) t).<span style="color:#a6e22e">getSQLState</span>().<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;40001&#34;</span>))) {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                   <span style="color:#66d9ef">if</span> (Debug.<span style="color:#a6e22e">verboseOn</span>()) {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                       Debug.<span style="color:#a6e22e">logVerbose</span>(<span style="color:#e6db74">&#34;Transaction abort, reason: &#34;</span> <span style="color:#f92672">+</span> t, module);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                       Debug.<span style="color:#a6e22e">logVerbose</span>(<span style="color:#e6db74">&#34;Retrying on OCC conflict&#34;</span>, module);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                   }
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                   <span style="color:#75715e">// Rollback to recover transaction state and loop again</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                   TransactionUtil.<span style="color:#a6e22e">rollback</span>(tx, ifErrorMessage, transactionAbortCause);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                   <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>               } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> GenericEntityException(t);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>               }
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">finally</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (transactionAbortCause <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>                    TransactionUtil.<span style="color:#a6e22e">commit</span>(tx);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                   transactionComplete <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (printException) {
+</span></span><span style="display:flex;"><span>                        Debug.<span style="color:#a6e22e">logError</span>(transactionAbortCause, module);
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    TransactionUtil.<span style="color:#a6e22e">rollback</span>(tx, ifErrorMessage, transactionAbortCause);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                   transactionComplete <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>               }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>       <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> GenericEntityException(<span style="color:#e6db74">&#34;Unexpected state in transaction handler&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Lưu ý:</strong> Đối với các ứng dụng sản xuất, chúng tôi cũng khuyên bạn nên bổ sung thêm logic cho exponential backoff và jitter, điều này giúp hệ thống hoạt động ổn định hơn trong điều kiện xung đột cao.
+Các ứng dụng hiện có không mô hình hóa giao dịch rõ ràng theo cách này có thể cần được phân tích sâu hơn để xác định cách xử lý OCC aborts một cách chính xác. Chúng tôi dự định sẽ viết một bài đăng trong tương lai về chủ đề này, sau khi có thêm dữ liệu từ trải nghiệm thực tế của khách hàng để xác định các mô hình phổ biến nhất.</p>
+<h3 id="kết-luận">Kết luận</h3>
+<p>Trong bài viết này, chúng tôi đã hướng dẫn bạn qua các thay đổi khác nhau được thực hiện đối với một ứng dụng phức tạp hiện có. Chúng tôi đã thực hiện một số sửa đổi nhỏ đối với schema để sử dụng các kiểu dữ liệu được hỗ trợ, tạo logic mới để tương tác đúng với cơ chế xác thực của Aurora DSQL, triển khai việc gom commit khi tải dữ liệu, và làm cho bộ xử lý giao dịch hoạt động đúng với ngữ nghĩa OCC.
+Mặc dù bản proof of concept này tập trung vào tính khả thi kỹ thuật hơn là mức độ sẵn sàng cho môi trường production, nó đã chứng minh rằng Aurora DSQL có thể hỗ trợ các ứng dụng cơ sở dữ liệu phức tạp như OFBiz với nỗ lực di chuyển hợp lý. Thử nghiệm này xác nhận rằng ngay cả những ứng dụng có schema phức tạp vẫn có thể được điều chỉnh để hoạt động với Aurora DSQL, bao gồm các tính năng bảo mật và khả năng mở rộng được cải thiện, thông qua các điều chỉnh có mục tiêu đối với xác thực, xử lý giao dịch và thiết kế schema.
+Những khía cạnh này cũng là các trọng tâm chính khi bạn lên kế hoạch migrations của riêng mình sang Aurora DSQL:</p>
+<ol>
+<li>Sử dụng các kiểu dữ liệu được hỗ trợ trong schema, bao gồm cả keys</li>
+<li>Triển khai logic xác thực dựa trên IAM cần thiết cho Aurora DSQL</li>
+<li>Đảm bảo kích thước giao dịch nằm trong giới hạn của Aurora DSQL</li>
+<li>Triển khai các giao dịch idempotent và có thể retry được
+Nếu bạn đang làm việc với các ứng dụng hiện có sử dụng Aurora DSQL, chúng tôi mời bạn chia sẻ kinh nghiệm và quan sát của mình trong phần bình luận!</li>
+</ol>
+<p><strong>Về tác giả</strong></p>
+<p>James Morle là Principal Engineer tại Amazon Web Services và đã tham gia sâu vào quá trình thiết kế và triển khai Aurora DSQL ngay từ những ngày đầu tiên. Ông đã có kinh nghiệm thiết kế và xây dựng các cơ sở dữ liệu quy mô rất lớn từ đầu những năm 1990.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../../vi/3-blogstranslated/3.2-blog2/" title="Blog 2"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../../vi/4-eventparticipated/" title="Các events đã tham gia" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1765277003"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1765277003"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1765277003"></script>
+    <script src="../../../js/jquery.sticky.js?1765277003"></script>
+    <script src="../../../js/featherlight.min.js?1765277003"></script>
+    <script src="../../../js/highlight.pack.js?1765277003"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1765277003"></script>
+    <script src="../../../js/learn.js?1765277003"></script>
+    <script src="../../../js/hugo-learn.js?1765277003"></script>
+
+    <link href="../../../mermaid/mermaid.css?1765277003" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1765277003"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>
+
